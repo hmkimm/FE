@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+section {
+  width: 100%;
+  height: 600px;
+  background-image: url(images/bg.png);
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 220px;
+  display: block;
+}
+div.text {
+  border-radius: 0px 0px 0.8em 0.8em;
+  background-color: rgb(167 88 28);
+  color: white;
+  width: 200px;
+  height: 200px;
+  padding: 10px 10px;
+  box-shadow: 0px 8px 3px #8b3918;
+}
+
+h2 + p {
+  font-size: small;
+  padding-top: 20px;
+}
