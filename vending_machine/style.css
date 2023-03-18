@@ -89,7 +89,20 @@ header img {
   border: 3px solid #6327fe;
 }
 .black {
+  position: relative;
+}
+.sold-out-bg {
+  width: 94px;
+  height: 130px;
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  top: 0;
+}
+.sold-out-img {
+  position: absolute;
+  top: 45px;
+  left: 17px;
 }
 .cola-text {
   width: 73px;
@@ -120,12 +133,14 @@ header img {
   padding: 6px 10px;
   box-sizing: border-box;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .balance-return {
   width: 94px;
   height: 33px;
   font-size: 13px;
+  font-weight: 500;
   text-align: center;
   line-height: 33px;
   border-radius: 8px;
@@ -134,6 +149,7 @@ header img {
   width: 200px;
   height: 33px;
   font-size: 13px;
+  font-weight: 500;
   border-style: solid;
   border-color: #bdbdbd;
   border-radius: 8px;
@@ -142,15 +158,19 @@ header img {
 }
 ::placeholder {
   color: #bdbdbd;
+  font-weight: 500;
 }
 
 button {
+  height: 32px;
   border-radius: 8px;
   border: 0;
   border-color: #bdbdbd;
   box-shadow: none;
   background-color: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .select-cola-wrap {
@@ -158,8 +178,11 @@ button {
   width: 200px;
   height: 106px;
   border-radius: 8px;
+  border: 1px solid #bdbdbd;
   padding: 12px 18px 0px 12px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 100;
 }
 .select-cola {
   width: 170px;
@@ -172,10 +195,15 @@ button {
   padding: 10px;
   box-sizing: border-box;
   font-size: 9px;
+  font-weight: 500;
   line-height: 46px;
 }
 .select-red {
   margin-bottom: 6px;
+}
+.select-green {
+  position: relative;
+  z-index: 1;
 }
 .select-cola-red {
   width: 18px;
@@ -187,8 +215,18 @@ button {
   border: 1px solid #bdbdbd;
   border-radius: 5px;
   font-size: 14px;
+  font-weight: 500;
   text-align: center;
   line-height: 30px;
+}
+.scroll {
+  width: 4px;
+  height: 79px;
+  background-color: white;
+  border-radius: 50px;
+  position: absolute;
+  top: 9px;
+  right: 4px;
 }
 .get {
   width: 94px;
@@ -196,16 +234,18 @@ button {
   background-color: #6327fe;
   color: white;
   font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
 }
 
 /* right layout */
+
 .l_container {
   display: flex;
+  width: 730px;
   margin: 68px auto 171px;
 }
-.right-wrap {
-  box-shadow: 0 0 5px green;
-}
+
 .cash {
   width: 360px;
   height: 50px;
@@ -222,6 +262,7 @@ button {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+  font-weight: 700;
   line-height: 32px;
   padding: 0px 10px;
   box-sizing: border-box;
@@ -230,16 +271,14 @@ button {
   width: 360px;
   height: 479px;
   background-color: white;
-  box-shadow: inset 0 0 5px blue;
   padding-top: 25px;
   margin-top: 16px;
   box-sizing: border-box;
 }
-.holding-cola-text {
+.gaining-cola-text {
   text-align: center;
-  /* margin: 25px 0 15px; */
+  font-size: 14px;
   font-weight: 700;
-  box-shadow: 0 0 5px red;
   box-sizing: border-box;
 }
 .holding-colas {
@@ -250,6 +289,8 @@ button {
   border: 1px solid #bdbdbd;
   border-radius: 8px;
   box-sizing: border-box;
+  position: relative;
+  font-weight: 500;
 }
 .holding-cola {
   width: 276px;
@@ -261,6 +302,10 @@ button {
   border-radius: 8px;
   margin-bottom: 6px;
   align-items: center;
+}
+.holding-cola-text {
+  font-weight: 500;
+  font-size: 9px;
 }
 .holding-cola:first-child {
   margin-top: 12px;
@@ -279,10 +324,47 @@ button {
   line-height: 30px;
   margin-right: 8px;
   box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 500;
 }
 .total-price {
   margin-right: 38px;
   margin-top: 11px;
   display: flex;
   justify-content: flex-end;
+}
+
+/* 반응형 */
+@media (max-width: 729px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    min-width: 376px;
+  }
+  header img {
+    width: 166px;
+    height: 78px;
+  }
+  .sold-out-img {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+  }
+  .l_container {
+    width: 360px;
+    display: block;
+    margin: 18px auto 0px;
+  }
+  .left-wrap {
+    margin-right: 0px;
+    padding-top: 0px;
+  }
+  .holding-cola-wrap {
+    padding: 0;
+    margin-top: 41px;
+  }
+}
+
+@media (max-width: 730px) {
 }
