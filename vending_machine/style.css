@@ -181,8 +181,31 @@ button {
   border: 1px solid #bdbdbd;
   padding: 12px 18px 0px 12px;
   box-sizing: border-box;
-  position: relative;
-  z-index: 100;
+  overflow-x: hidden;
+}
+
+.select-cola-wrap::-webkit-scrollbar {
+  width: 4px;
+}
+.select-cola-wrap::-webkit-scrollbar-button:vertical:start:decrement,
+.select-cola-wrap::-webkit-scrollbar-button:vertical:start:increment {
+  display: block;
+  height: 5px;
+}
+
+.select-cola-wrap::-webkit-scrollbar-thumb {
+  height: 79px;
+  border-radius: 50px;
+  /* border: 4px solid #eae8fe; */
+  background-color: white;
+  box-sizing: border-box;
+}
+.select-cola-wrap::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+.select-cola-wrap::-webkit-scrollbar::after {
+  content: "<";
+  background-color: yellow;
 }
 .select-cola {
   width: 170px;
@@ -197,6 +220,19 @@ button {
   font-size: 9px;
   font-weight: 500;
   line-height: 46px;
+  position: relative;
+}
+
+.hidden img,
+.hidden p {
+  opacity: 0;
+}
+.hidden {
+  background-color: #eae8fe;
+}
+.select-cola-text {
+  left: 38px;
+  position: absolute;
 }
 .select-red {
   margin-bottom: 6px;
@@ -205,6 +241,7 @@ button {
   position: relative;
   z-index: 1;
 }
+
 .select-cola-red {
   width: 18px;
   height: 33px;
@@ -219,7 +256,7 @@ button {
   text-align: center;
   line-height: 30px;
 }
-.scroll {
+/* .scroll {
   width: 4px;
   height: 79px;
   background-color: white;
@@ -227,7 +264,7 @@ button {
   position: absolute;
   top: 9px;
   right: 4px;
-}
+} */
 .get {
   width: 94px;
   height: 106px;
@@ -242,7 +279,7 @@ button {
 
 .l_container {
   display: flex;
-  width: 730px;
+  width: 748px;
   margin: 68px auto 171px;
 }
 
@@ -302,10 +339,13 @@ button {
   border-radius: 8px;
   margin-bottom: 6px;
   align-items: center;
+  position: relative;
 }
 .holding-cola-text {
   font-weight: 500;
   font-size: 9px;
+  left: 38px;
+  position: absolute;
 }
 .holding-cola:first-child {
   margin-top: 12px;
@@ -328,7 +368,7 @@ button {
   font-weight: 500;
 }
 .total-price {
-  margin-right: 38px;
+  margin-right: 27px;
   margin-top: 11px;
   display: flex;
   justify-content: flex-end;
@@ -341,6 +381,11 @@ button {
     padding: 0;
     background-color: white;
     min-width: 376px;
+    height: 1117px;
+  }
+  div,
+  p {
+    box-shadow: 0 0 4px red;
   }
   header img {
     width: 166px;
@@ -359,6 +404,15 @@ button {
   .left-wrap {
     margin-right: 0px;
     padding-top: 0px;
+    padding-bottom: 0;
+  }
+
+  .cola-wrap {
+    width: 94px;
+    height: 130px;
+  }
+  .cash-wrap {
+    margin-bottom: 0;
   }
   .holding-cola-wrap {
     padding: 0;
