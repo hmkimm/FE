@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
 }
 body {
   background-color: #eae8fe;
@@ -200,9 +201,7 @@ button {
   background-color: white;
   box-sizing: border-box;
 }
-.select-cola-wrap::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0);
-}
+
 .select-cola-wrap::-webkit-scrollbar::after {
   content: "<";
   background-color: yellow;
@@ -256,15 +255,7 @@ button {
   text-align: center;
   line-height: 30px;
 }
-/* .scroll {
-  width: 4px;
-  height: 79px;
-  background-color: white;
-  border-radius: 50px;
-  position: absolute;
-  top: 9px;
-  right: 4px;
-} */
+
 .get {
   width: 94px;
   height: 106px;
@@ -288,7 +279,7 @@ button {
   height: 50px;
   background-color: white;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 .cash-wrap {
   width: 306px;
@@ -329,6 +320,33 @@ button {
   position: relative;
   font-weight: 500;
 }
+/* 획득 음료 scroll */
+.holding-colas {
+  overflow-x: hidden;
+}
+#violet-hidden img {
+  height: 500px;
+}
+#violet-hidden {
+  opacity: 0;
+}
+.holding-colas::-webkit-scrollbar {
+  width: 4px;
+}
+.holding-colas::-webkit-scrollbar-button:vertical:start:decrement,
+.holding-colas::-webkit-scrollbar-button:vertical:start:increment {
+  display: block;
+  height: 5px;
+}
+
+.holding-colas::-webkit-scrollbar-thumb {
+  height: 79px;
+  border-radius: 50px;
+  /* border: 4px solid #eae8fe; */
+  background-color: white;
+  box-sizing: border-box;
+}
+
 .holding-cola {
   width: 276px;
   height: 46px;
@@ -383,10 +401,7 @@ button {
     min-width: 376px;
     height: 1117px;
   }
-  div,
-  p {
-    box-shadow: 0 0 4px red;
-  }
+
   header img {
     width: 166px;
     height: 78px;
@@ -400,11 +415,20 @@ button {
     width: 360px;
     display: block;
     margin: 18px auto 0px;
+    box-shadow: inset0 0 0 4px purple;
   }
   .left-wrap {
+    height: 532px;
     margin-right: 0px;
     padding-top: 0px;
     padding-bottom: 0;
+    box-shadow: inset 0 0 4px green;
+  }
+  .cash {
+    box-shadow: inset 0 0 4px pink;
+  }
+  .holding-cola-wrap {
+    box-shadow: inset 0 0 4px black;
   }
 
   .cola-wrap {
