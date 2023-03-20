@@ -57,6 +57,9 @@ body {
 }
 
 /* --layout-- */
+button:not(:active) {
+  cursor: pointer;
+}
 header img {
   width: 386px;
   height: 164px;
@@ -455,7 +458,4 @@ button {
     padding: 0;
     margin-top: 41px;
   }
-}
-
-@media (max-width: 730px) {
 }
