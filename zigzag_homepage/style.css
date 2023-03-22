@@ -29,11 +29,14 @@ header {
 }
 .title-wrap .title {
   /* width: 26%; */
-  box-shadow: inset 0 -0.6em orangered;
+  box-shadow: inset 0 -0.6em 0 orangered;
   flex-basis: 280px;
 }
 header .title-wrap {
   width: 26%;
+  /* flex-basis: 26%;
+  flex-shrink: 0;
+  p의 양이 많지만 이렇게 하면 축소 안되고 26% 확보 가능, 줄어들지 않음 */
 }
 header p {
   /* width: 74%; */
@@ -65,9 +68,13 @@ section.wrap {
   position: relative;
   margin-bottom: 24px;
 }
+section.wrap:last-child {
+  margin-bottom: 0;
+}
 
 .wrap img {
-  width: 26%;
+  /* width: 26%; */
+  max-width: 100%;
   opacity: 60%;
 }
 .left-wrap::after {
@@ -83,7 +90,9 @@ section.wrap {
   content: "Scrap";
 }
 div.explain-text-wrap {
-  width: 74%;
+  /* width: 74%; */
+  flex-basis: 0;
+  flex-grow: 1;
   background-color: white;
   padding: 24px;
 }
