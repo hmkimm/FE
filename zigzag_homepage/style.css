@@ -1,4 +1,5 @@
 /* reset css */
+body,
 p,
 h1,
 ul,
@@ -14,9 +15,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 /* header style */
-.container {
-  width: 1080px;
+body {
+  padding: 100px 70px;
 }
+
 header {
   display: flex;
   margin-bottom: 100px;
@@ -30,13 +32,14 @@ header {
 .title-wrap .title {
   /* width: 26%; */
   box-shadow: inset 0 -0.6em 0 orangered;
-  flex-basis: 280px;
+  /* flex-basis: 280px; */
 }
 header .title-wrap {
   width: 26%;
+
   /* flex-basis: 26%;
-  flex-shrink: 0;
-  p의 양이 많지만 이렇게 하면 축소 안되고 26% 확보 가능, 줄어들지 않음 */
+  flex-shrink: 0; */
+  /* p의 양이 많지만 이렇게 하면 축소 안되고 26% 확보 가능, 줄어들지 않음 */
 }
 header p {
   /* width: 74%; */
@@ -53,17 +56,12 @@ header div.horizontal-line {
   align-items: center;
   margin-right: 20px;
 }
-/* header p::before {
-  content: ">";
-  width: 100px;
-  height: 100px;
-  border: 3px solid white;
-} */
 
-/* section style */
+/* section style--------------- */
 section.wrap {
-  width: 1080px;
-  height: 173px;
+  /* width: 1080px; */
+  /* height: 173px; */
+  max-width: 100%;
   display: flex;
   position: relative;
   margin-bottom: 24px;
@@ -73,8 +71,12 @@ section.wrap:last-child {
 }
 
 .wrap img {
-  /* width: 26%; */
-  max-width: 100%;
+  width: 26%;
+  aspect-ratio: 288 / 200;
+  height: auto;
+  /* flex-basis: 26%; */
+  /* flex-shrink: 0; */
+  /* max-width: 100%; */
   opacity: 60%;
 }
 .left-wrap::after {
@@ -91,8 +93,8 @@ section.wrap:last-child {
 }
 div.explain-text-wrap {
   /* width: 74%; */
-  flex-basis: 0;
-  flex-grow: 1;
+  flex-basis: 74%;
+  /* flex-grow: 1; */
   background-color: white;
   padding: 24px;
 }
@@ -104,21 +106,27 @@ div.explain-text-wrap {
 }
 .explain-text-wrap li {
   font-size: 14px;
+  line-height: 25px;
 }
 li::before {
-  content: "•";
-  font-size: 35px;
-  color: #bd8fe8;
-  vertical-align: bottom;
-  line-height: 24px;
-  box-sizing: border-box;
-  margin-left: 12px;
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bd8fe8;
+  vertical-align: middle;
+  margin-left: 10px;
   margin-right: 10px;
+}
+li {
+  padding-left: 20px;
+  text-indent: -20px;
 }
 ul {
   margin-left: -10px;
 }
-/* second-wrap */
+/* second-wrap----------------- */
 section.second {
   flex-direction: row-reverse;
   position: relative;
@@ -140,10 +148,57 @@ section.second {
   top: 50%;
   right: 6%;
   transform: translate(-50%, -50%);
-  /* opacity: 1; */
 }
 
-.container {
-  width: 1080px;
-  margin: 100px auto;
+/* media query-------------- */
+@media (max-width: 900px) {
+  .container {
+    /* min-width: 560px; */
+    padding: 0 20px;
+  }
+  header {
+    display: block;
+  }
+  .horizontal-line {
+    display: none;
+  }
+  .main-wrap {
+    width: auto;
+  }
+  .wrap {
+    flex-direction: column;
+    position: relative;
+    /* width: calc(100% - (70px * 2)); */
+    min-width: 370px;
+    flex-shrink: 0;
+  }
+  section.second {
+    flex-direction: column;
+  }
+  .wrap img {
+    width: 100%;
+    aspect-ratio: 288 / 200;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .left-wrap::after {
+    content: "Rest";
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .wrap.second::after {
+    content: "Craft";
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 35%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
 }
