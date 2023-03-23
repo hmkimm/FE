@@ -4,7 +4,7 @@ li,
 body {
   padding: 0;
   margin: 0;
-  color: rgb(82, 80, 80);
+  /* color: rgb(82, 80, 80); */
 }
 li {
   list-style: none;
@@ -48,5 +48,16 @@ ul a {
   ul,
   .icons {
     text-align: center;
+  }
+
+  /* animation--> */
+  header {
+    animation: bgChange 1s forwards;
+  }
+  @keyframes bgChange {
+    to {
+      background-color: steelblue;
+      color: white;
+    }
   }
 }
