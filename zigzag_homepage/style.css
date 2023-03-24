@@ -16,7 +16,9 @@ body {
 }
 /* header style */
 body {
-  padding: 100px 70px;
+  padding: 100px 0;
+  margin: 0 auto;
+  width: 1024px;
 }
 
 header {
@@ -65,7 +67,7 @@ section.wrap {
   margin-bottom: 40px;
   box-shadow: inset 0 0 30px yellow;
 }
-section.wrap:last-child {
+.wrap:last-child {
   margin-bottom: 0;
 }
 
@@ -141,9 +143,60 @@ section.second {
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 900px) {
+/* ------------------------------------------- */
+
+@media (max-width: 1155px) {
   body {
-    padding: 30px;
+    padding: 30px 80px;
+    width: auto;
+  }
+
+  header {
+    display: block;
+  }
+  .horizontal-line {
+    display: none;
+  }
+  .main-wrap {
+    margin-top: -50px;
+  }
+  .wrap {
+    position: relative;
+  }
+
+  .wrap img {
+    /* width: 26%; */
+    flex-basis: 45%;
+    object-fit: cover;
+  }
+  /* .wrap .explain-text-wrap {
+    max-width: inherit;
+  } */
+  .left-wrap::after {
+    content: "Rest";
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .wrap.second::after {
+    content: "Craft";
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 35%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ------------------------------------- */
+@media (max-width: 620px) {
+  body {
+    padding: 30px 20px;
   }
 
   header {
@@ -160,14 +213,17 @@ section.second {
     position: relative;
     /* width: calc(100% - (70px * 2)); */
     /* min-width: 370px; */
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
   }
   section.second {
     flex-direction: column;
   }
   .wrap img {
     width: 100%;
+    flex-basis: 0;
+    height: 170px;
     object-fit: cover;
+    position: relative;
   }
   .wrap .explain-text-wrap {
     max-width: inherit;
