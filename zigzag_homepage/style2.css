@@ -1,0 +1,96 @@
+/* reset css */
+h2,
+h3,
+button {
+  margin: 0;
+  padding: 0px;
+}
+body {
+  background-color: #673399;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: -1;
+}
+
+h2,
+h3 {
+  color: inherit;
+  font-size: inherit;
+}
+.first_container {
+  width: 100%;
+  height: calc(100% - 70px);
+  background-color: seashell;
+  box-shadow: inset 0 0 8px green;
+}
+
+section.first-wrap {
+  background-color: seashell;
+  width: 1080px;
+  box-shadow: inset 0 0 8px orangered;
+  padding: 100px 0;
+  margin: 0 auto;
+}
+
+/* header---------------- */
+
+h2 {
+  font-size: 40px;
+  color: salmon;
+  margin-right: auto;
+  font-weight: inherit;
+}
+button {
+  width: 172px;
+  height: 40px;
+  background-color: orangered;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 4px 4px orange;
+}
+.main-container {
+  display: flex;
+  gap: 24px;
+}
+/* main-contents------------------------ */
+.main-contents-wrap {
+  width: calc((100% - (24px * 2)) / 3);
+  background-color: white;
+}
+.main-contents-wrap img {
+  width: 100%;
+}
+.text-des {
+  padding: 24px;
+}
+.text-des span {
+  background-color: #f1e0f8;
+  color: #673399;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+}
+h3 {
+  height: 60px;
+  font-size: 24px;
+  margin: 24px 0 32px;
+}
+.text-explain {
+  font-size: 14px;
+  height: 150px;
+}
+.text-lower {
+  font-size: 12px;
+}
+.horizontal-line {
+  width: calc(100% - 24px);
+  height: 1px;
+  margin-left: auto;
+  border: 1px solid #eeeeee;
+  background-color: #eeeeee;
+}
+.text-lower {
+  padding: 28px 24px;
+}
