@@ -8,8 +8,6 @@ button {
 body {
   background-color: #673399;
   font-family: "Montserrat", sans-serif;
-  position: relative;
-  z-index: -1;
 }
 
 h2,
@@ -19,7 +17,7 @@ h3 {
 }
 .first_container {
   width: 100%;
-  height: calc(100% - 70px);
+  height: 100%;
   background-color: seashell;
   box-shadow: inset 0 0 8px green;
 }
@@ -40,6 +38,9 @@ h2 {
   margin-right: auto;
   font-weight: inherit;
 }
+header .h2-lower {
+  box-shadow: inset 0 -0.5em white;
+}
 button {
   width: 172px;
   height: 40px;
@@ -48,7 +49,7 @@ button {
   border: none;
   color: white;
   font-size: 14px;
-  box-shadow: 0 4px 4px orange;
+  box-shadow: 0 4px 0 0 #c83905;
 }
 .main-container {
   display: flex;
@@ -93,4 +94,30 @@ h3 {
 }
 .text-lower {
   padding: 28px 24px;
+}
+.lower-wrap {
+  padding-right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.people .people-more {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+.people :nth-child(3) {
+  z-index: 30;
+  position: relative;
+}
+.people :nth-child(2) {
+  transform: translate(20px);
+  z-index: 20;
+}
+
+.people :nth-child(1) {
+  transform: translate(40px);
+  z-index: 10;
 }

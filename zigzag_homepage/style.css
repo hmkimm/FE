@@ -76,19 +76,31 @@ section img {
   /* flex-shrink: 0; */
   object-fit: cover;
   /* max-width: 100%; */
-  opacity: 60%;
+  /* opacity: 60%; */
 }
-.left-wrap::after {
-  content: "Rest";
+.left-wrap strong {
+  width: 26%;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0 0 0 / 0.4);
   color: white;
   font-size: 30px;
-  top: 50%;
-  left: 13%;
-  transform: translate(-50%, -50%);
+  font-weight: inherit;
+  inset: 0;
 }
-.third-wrap::after {
-  content: "Scrap";
+.second strong {
+  width: 26%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0 0 0 / 0.4);
+  color: white;
+  font-size: 30px;
+  font-weight: inherit;
 }
 div.explain-text-wrap {
   /* width: 74%; */
@@ -131,7 +143,7 @@ section.second {
   position: relative;
 }
 
-.wrap.second::after {
+/* .wrap.second::after {
   content: "Craft";
   position: absolute;
   color: white;
@@ -139,7 +151,7 @@ section.second {
   top: 50%;
   right: 6%;
   transform: translate(-50%, -50%);
-}
+} */
 
 /* ------------------------------------------- */
 
@@ -170,7 +182,7 @@ section.second {
   /* .wrap .explain-text-wrap {
     max-width: inherit;
   } */
-  .left-wrap::after {
+  /* .left-wrap::after {
     content: "Rest";
     position: absolute;
     color: white;
@@ -178,7 +190,7 @@ section.second {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
 
   .wrap.second::after {
     content: "Craft";
@@ -226,7 +238,7 @@ section.second {
   .wrap .explain-text-wrap {
     max-width: inherit;
   }
-  .left-wrap::after {
+  /* .left-wrap::after {
     content: "Rest";
     position: absolute;
     color: white;
@@ -234,15 +246,15 @@ section.second {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
 
-  .wrap.second::after {
-    content: "Craft";
+  /* .wrap.second::after {
+    content: "Crafteee";
     position: absolute;
     color: white;
     font-size: 30px;
     top: 35%;
     left: 60%;
     transform: translate(-50%, -50%);
-  }
+  } */
 }
