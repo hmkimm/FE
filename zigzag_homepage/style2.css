@@ -6,7 +6,7 @@ button {
   padding: 0px;
 }
 body {
-  background-color: #673399;
+  /* background-color: #673399; */
   font-family: "Montserrat", sans-serif;
 }
 
@@ -19,13 +19,13 @@ h3 {
   width: 100%;
   height: 100%;
   background-color: seashell;
-  box-shadow: inset 0 0 8px green;
+  /* box-shadow: inset 0 0 8px green; */
 }
 
 section.first-wrap {
   background-color: seashell;
   width: 1080px;
-  box-shadow: inset 0 0 8px orangered;
+  /* box-shadow: inset 0 0 8px orangered; */
   padding: 100px 0;
   margin: 0 auto;
 }
@@ -50,6 +50,7 @@ button {
   color: white;
   font-size: 14px;
   box-shadow: 0 4px 0 0 #c83905;
+  cursor: pointer;
 }
 .main-container {
   display: flex;

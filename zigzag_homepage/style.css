@@ -11,6 +11,10 @@ li {
 ul li {
   list-style-type: none;
 }
+body {
+  background-color: #673399;
+  z-index: 1;
+}
 
 /* header style */
 .second-container {
