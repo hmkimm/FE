@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>물콩이 디데이</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+   
+  <h1>D-DAY Calender</h1>
+<!-- img  -->
+  <article class="img-container">
+    <div class="img-wrap">
+      <img src="img/mulkong.jpeg" alt="물콩이 사진">
+      <p>김물콩</p>
+    </div>
+
+    <div class="img-wrap">
+      <img src="img/favicon.png" alt="김가네 사진">
+      <p>김가네</p>
+    </div>
+  </article>
+
+  <!-- d-day -->
+  <article class="day-container">
+    <div class="text-wrap">
+    <strong>가족 된 지</strong>
+    <span id="family">ooo일 째</span>
+    </div>
+
+    <div class="text-wrap">
+    <strong>정기검진</strong>
+    <div class="date-wrap">
+      <p id="check-up">D-ooo</p>
+      <p id="check-up-date">oooo.oo.oo</p>
+    </div>
+    </div>
+  </article>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+
+  <script>
+    // 가족된 지 ---------------->//
+    var now = new Date();
+    var start = new Date('2021-05-17');
+
+    var coming = ((now.getTime() - start.getTime()) / (1000 * 3600 * 24)) + 1
+    var Diff = Math.floor(coming);
+    $('#family').text(Diff + '일 째');
+
+
+
+    // 정기검진--------------------->//
+    var ms = start.getTime() + (365 * (1000 * 3600 * 24));
+    var regular = new Date(ms);
+    var regularDate = ((regular.getFullYear()) + 1) + '-' + (regular.getMonth()+1) + '-' + regular.getDate();
+    $('#check-up-date').text(regularDate);
+  
+    // 정기검진 남은 날짜------------------>//
+    var gap = (regular.getTime() - now.getTime()) / (1000 * 3600 * 24);
+    var gapDate = Math.floor(gap);
+    $('#check-up').text('D' + gapDate);
+  </script>
+</body>
+</html> 

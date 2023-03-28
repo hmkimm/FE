@@ -1,0 +1,40 @@
+/* reset css */
+h1,
+img,
+body,
+p,
+strong {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+/* img container------------> */
+.img-wrap {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  box-shadow: inset 0 0 7px green;
+}
+.img-wrap img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.img-container {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: inset 0 0 5px red;
+}
+
+/* d-day---------------------------> */
+.text-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0 0 6px purple;
+}
