@@ -63,7 +63,18 @@ h1 {
 .heart {
   width: 50px;
   height: 50px;
+  animation: move 0.3s alternate infinite;
 }
+@keyframes move {
+  from {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    transform: rotate(5deg);
+  }
+}
+
 .img-container {
   display: flex;
   justify-content: space-between;
@@ -94,4 +105,8 @@ h1 {
 .text-wrap:nth-child(2) {
   border-top: 1px solid #dad8d8;
   padding-top: 10px;
+}
+
+#family {
+  box-shadow: inset 0 -0.5em rgb(135, 169, 215);
 }
