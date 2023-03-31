@@ -13,6 +13,7 @@
 <body>
    <section class="l_wrap">
   <h1 class="animate__animated animate__tada">D-DAY Calender</h1>
+  <span class="today">today ddd</span>
 <!-- img  -->
   <article class="img-container">
     <div class="img-wrap">
@@ -30,7 +31,7 @@
   <article class="day-container">
     <div class="text-wrap">
     <strong>가족 된 지</strong>
-    <span id="family">ooo일 째</span>
+    <span id="family" class="animate__animated animate__flipInX">ooo일 째</span>
     </div>
 
     <div class="text-wrap">
@@ -49,9 +50,16 @@
 
 
   <script>
-    // 가족된 지 ---------------->//
+    // header-------------------->
     var now = new Date();
+    var weekArray = new Array('일', '월', '화', '수','목','금','토');
+    var now2 = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + '-' + weekArray[now.getDay()];
+    $('.today').html(now2);
+    // 가족된 지 ---------------->//
+ 
     var start = new Date('2021-05-17');
+
+  
 
     var coming = ((now.getTime() - start.getTime()) / (1000 * 3600 * 24)) + 1
     var Diff = Math.floor(coming);
@@ -66,9 +74,10 @@
     $('#check-up-date').text(regularDate);
   
     // 정기검진 남은 날짜------------------>//
-    var gap = (regular.getTime() - now.getTime()) / (1000 * 3600 * 24);
-    var gapDate = Math.floor(gap);
-    $('#check-up').text('D' + gapDate);
+    var hospital = new Date("2023-05-17")
+    var gap = hospital.getTime() - now.getTime();
+    var gapDate = Math.floor(gap / (1000 * 3600 * 24));
+    $('#check-up').text('D - ' + gapDate);
   </script>
   </section>
 </body>
