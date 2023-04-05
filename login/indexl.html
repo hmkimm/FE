@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 화면 구현</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+
+<body>
+  <div class="container">
+  <header>
+   <h1>로그인 또는 회원가입</h1>
+  </header>
+
+  <main class="main-wrap">
+
+  <h2>위니브에서 여러분의 궁금증을 해결하세요! :)</h2>
+  <input class="inp-login" type="text" placeholder="아이디" required>
+  <strong class="id-des">아이디를 입력해 주세요.</strong>
+
+  <input class="inp-pw" type="text" placeholder="비밀번호" required>
+  <strong class="pw-des">아이디 혹은 비밀번호가 일치하지 않습니다.</strong>
+
+  <input type="checkbox" class="checkbox-login" id="login-hold">
+  <label class="login-click" for="login-hold">로그인상태유지</label>
+  <script>
+    $('.login-click').on('click',function(){
+      $('.login-click').toggleClass('label-click')
+    });
+  </script>
+  <button class="btn-login" type="submit">로그인</button>
+  <div class="join-find">
+    <a href="#" class="join">회원가입</a>
+    <a href="#">아이디/비밀번호 찾기</a>
+  </div>
+
+  <div class="or">또는</div>
+  
+  <section class="btn-wrap">
+    <ul>
+      <a href="#"><li class="icon google">구글 계정으로 로그인</li></a>
+      <a href="#"><li class="icon facebook">페이스북 계정으로 로그인</li></a>
+      <a href="#"><li class="icon naver">네이버 계정으로 로그인</li></a>
+      <a href="#"><li class="icon kakao">카카오톡 계정으로 로그인</li></a>
+    </ul>
+  </section>
+</main>
+</div>
+
+    
+</body>
+</html>
